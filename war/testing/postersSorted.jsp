@@ -2,6 +2,9 @@
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ page import="java.util.LinkedList" %>
+<%@ page import="com.hackduke.codereggie.actions" %>
+
 
 <html>
   <head>
@@ -155,6 +158,25 @@
     </div>
     
     <div class="col-md-12">
+    	
+    	
+    	<%  
+    	SortEvents sorter = new SortEvents();
+        ArrayList<String> urls = new ArrayList<String>();
+    	urls = sorter.sortBySoonest();
+    	int idx = 0;
+    	
+    	for (int i = 0; i < urls.size(); i++) {
+    	%>
+    	<p><%=urls.get(0)%></p>
+    	<%
+    	idx++;
+    	}
+    	%>
+    	
+    	
+    	
+    	
 	    <!-- MASONRY START -->
 		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item", "gutter": 10, }'>
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
@@ -164,3 +186,4 @@
 	
   </body>
 </html>
+
