@@ -162,7 +162,27 @@
 			
 			<div class="grid-sizer"></div>
 			<div class="item">
-				<img src="/images/concert.jpg"></img>
+				<a href="#photo1" data-toggle="modal"><img src="/images/concert.jpg"></img></a>
+				
+				<!-- Modal -->
+<div class="modal fade" id="photo1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">GET EVENT TITLE (title)</h4>
+      </div>
+      <div class="modal-body">
+        <img src="/images/concert.jpg" style="100%;"></img>
+        <br />
+        <h4><!-- DESCRIPTION OF EVENT (additionalInfo)--></h4>
+        <br />
+        <h4><!-- ADDRESS (address)--></h4>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 			</div>
 			<div class="item">
 				<img src="/images/fountain.jpg"></img>
