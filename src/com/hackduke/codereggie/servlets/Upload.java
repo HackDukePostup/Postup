@@ -21,6 +21,9 @@ import java.util.Date;
 
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.images.ImagesService;
+import com.google.appengine.api.images.ImagesServiceFactory;
+import com.google.appengine.api.images.ServingUrlOptions;
 
 public class Upload extends HttpServlet {
 	private BlobstoreService blobstoreService = BlobstoreServiceFactory
@@ -29,16 +32,23 @@ public class Upload extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
+		
 		System.out.println("You at least hit the method");
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-
 		Map<String, BlobKey> blobs = blobstoreService.getUploadedBlobs(req);
+		
 		BlobKey blobKey = blobs.get("myFile");
 		System.out.println("Got image blob");
 		Entity event = new Entity("Event");
-		event.setProperty("imageBlobKey", blobKey.getKeyString());
+		ImagesService imagesService = ImagesServiceFactory.getImagesService();
+        ServingUrlOptions suo = ServingUrlOptions.Builder.withBlobKey(blobKey);
+        String imageUrl = imagesService.getServingUrl(suo);
+		event.setProperty("imageUrl", imageUrl);
+		
 		event.setProperty("title", req.getParameter("title"));
+		
 		event.setProperty("address", req.getParameter("address"));
+		
 		System.out.println("Got to address");
 		String date = req.getParameter("date");
 		try {
@@ -46,9 +56,12 @@ public class Upload extends HttpServlet {
 			event.setProperty("date", dateParsed);
 		} catch (Exception e) {
 		}
+		
 		event.setProperty("additionalInfo", req.getParameter("additionalInfo"));
+		
 		event.setProperty("tags", req.getParameter("tags"));
 		System.out.println("Got to tags");
+		
 		String venues = req.getParameter("venues");
 		StringTokenizer strtok = new StringTokenizer(venues, ",");
 		while (strtok.hasMoreTokens()) {	
@@ -60,6 +73,7 @@ public class Upload extends HttpServlet {
 			datastore.put(associatedEvent);
 			System.out.println("WE DID IT");
 		}
+		
 		System.out.println("Time to redirect...");
 		res.sendRedirect("/posters.jsp");
 	}

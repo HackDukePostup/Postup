@@ -2,6 +2,9 @@
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.hackduke.codereggie.actions.SortEvents" %>
+
 
 <html>
   <head>
@@ -155,92 +158,32 @@
     </div>
     
     <div class="col-md-12">
+    	
+    	
+    	<%  
+    	SortEvents sorter = new SortEvents();
+        ArrayList<String> urls = new ArrayList<String>();
+    	urls = sorter.sortBySoonest();
+    	int idx = 0;
+    	
+    	for (int i = 0; i < urls.size(); i++) {
+    	%>
+    	<p><%=urls.get(0)%></p>
+    	<%
+    	idx++;
+    	}
+    	%>
+    	
+    	
+    	
+    	
 	    <!-- MASONRY START -->
-	    <script src="/masonry/js/masonry.pkgd.min.js"></script>
-		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true}'>
+		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item", "gutter": 10, }'>
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
-<<<<<<< HEAD
-			
-			<div class="grid-sizer"></div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-=======
 			<!-- <div class="item"></div> -->
->>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 		</div>
 	</div>
 	
   </body>
 </html>
+

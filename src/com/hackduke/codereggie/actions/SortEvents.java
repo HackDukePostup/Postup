@@ -30,12 +30,12 @@ public class SortEvents {
 		PreparedQuery pq = datastore.prepare(q);
 
 		for (Entity result : pq.asIterable()) {
-		  String imageID = (String) result.getProperty("imageBlobKey");
+		  String imageID = (String) result.getProperty("imageUrl");
 		  eventsImages.add(imageID);
 		}
 		
 		for (int i = 0; i < eventsImages.size(); i++) {
-			System.out.println("http://code-reggie.appspot.com/_ah/upload/" + eventsImages.get(i));
+			System.out.println(eventsImages.get(i));
 		}
 		
 		return eventsImages;
