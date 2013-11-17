@@ -13,13 +13,25 @@ h1 {
 #upload_button {
 	float:none;
 	width:calc(100% - 40px);
-	margin-bottom;
+	margin-bottom:20px;
 }
 
 .item {
-  margin-bottom: 10px;
+  width:100%;
+  margin-bottom: 20px;
 }
 
+.item img {  
+  max-width:100%;
+  overflow:hidden;
+}
+
+.grid-sizer {
+		width: 100%;
+	}
+	.item {
+		width:100%;
+	}
 
 
 /* Small devices (tablets, 768px and up) */
@@ -35,28 +47,26 @@ h1 {
 		float:right;
 		margin-right:20px;
 	}
-}
-
-.photo_on_board {
-	width:calc(100% - 20px);
-	padding-left:10px;
-	padding-right:10px;
+	
+	.grid-sizer{
+		width: 33%;
+	}
+	.item {
+		width:33%;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	.photo_on_board {
-		width:calc(25% - 20px);
-		padding-left:10px;
-		padding-right:10px;
-	}	
+	.grid-sizer{
+		width: 25%;
+	}
+	.item {
+		width:25%;
+	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	.photo_on_board {
-		width:calc(20% - 20px);
-		padding-left:10px;
-		padding-right:10px;
-	}
+
 }

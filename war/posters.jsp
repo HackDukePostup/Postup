@@ -156,9 +156,85 @@
     
     <div class="col-md-12">
 	    <!-- MASONRY START -->
-		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item", "gutter": 10, }'>
+	    <script src="/masonry/js/masonry.pkgd.min.js"></script>
+		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true}'>
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
-			<!-- <div class"item"></div> -->
+			
+			<div class="grid-sizer"></div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/concert.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
 		</div>
 	</div>
 	
