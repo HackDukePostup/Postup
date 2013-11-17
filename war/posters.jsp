@@ -159,8 +159,16 @@
     <div class="col-md-12">
             <!-- MASONRY START -->
             <script src="/masonry/js/masonry.pkgd.min.js"></script>
-                <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true, "gutter": 10}'>
-                        <div class="grid-sizer"></div>
+            <script type="text/javascript">
+         	// initialize Masonry
+            var msnry = new Masonry( container );
+            // layout Masonry again after all images have loaded
+            imagesLoaded( container, function() {
+              msnry.layout();
+            });
+            </script>
+                <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 310, "itemSelector": ".item", "isFitWidth": true, "gutter": 10}' style="float:none;margin-left:auto;margin-right:auto;">
+                        <!-- <div class="grid-sizer"></div> -->
                         
                         <% 
                         SortEvents sorter = new SortEvents();

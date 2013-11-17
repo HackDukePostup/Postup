@@ -169,7 +169,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   
   	<form action="/posters.jsp" method="get" enctype="multipart/form-data">
     <input id="pac-input" name="address" class="controls" type="text" placeholder="Show me events near..." style="color:black;margin-top:30px;margin-left:auto;margin-right:auto;width:70%;">	  
-      <div id="map_container" style="background-color:#242223; background-opacity:.5; width:50%; height:450px; margin-left:auto; margin-right:auto; border-radius:10px">
+      <div id="map_container" style="background-color:#242223; background-opacity:.5;height:450px; margin-left:auto; margin-right:auto; border-radius:10px">
 	    	<div id="spacer" style="height:10px;width:100%;"></div>
 	    <div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 70px);"></div>
 	    	<div class="form-group">
