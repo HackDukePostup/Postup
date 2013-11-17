@@ -156,24 +156,28 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <body style="background-image:url('/images/austin.jpg'); background-size:100%;">
   	<div class="row" style="margin-bottom:60px;">
 	  <div class="col-xs-12 col-sm-6 col-md-6">
-	  	<h1 style="margin-top:0px; color:#ffffff">POSTUP</h1>
+	  	<img src="/images/logo1.png" style="margin-left:20px;" ></img>
+	  	<!-- <!-- <h1 style="margin-top:0px; color:#ffffff">POSTUP</h1> -->
 	  </div>
 	</div>
+	
+	
   
   
   	<form action="/posters.jsp" method="get" enctype="multipart/form-data">
     <input id="pac-input" name="address" class="controls" type="text" placeholder="Search Box">
     
-    <div id="map_container" style="background-color:#242223; background-opacity:.5; width:60%; height:400px; margin-left:auto; margin-right:auto; border-radius:10px">
+    <div id="map_container" style="background-color:#242223; background-opacity:.5; width:57%; height:500px; margin-left:auto; margin-right:auto; border-radius:10px">
     	<div id="spacer" style="height:10px;width:100%;"></div>
-    	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 20px);"></div>
-    </div>
-
-    <div class="form-group">
-    	<div class="col-sm-offset-9 col-sm-9;" style="padding-top:5px">
-        	<button type="submit" class="btn btn-primary">Go</button>
+    	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 70px);"></div>
+    	<div class="form-group">
+    		<div class="col-sm-offset-9 col-sm-9;" style="padding-top:12px; padding-left:70px;">
+        		<button type="submit" class="btn btn-default">Go</button>
         </div>
     </div>
+    </div>
+
+    
     </form>
   </body>
 </html>
