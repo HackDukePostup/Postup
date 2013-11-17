@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.hackduke.codereggie.actions.SortEvents" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
@@ -191,70 +193,20 @@
 				<img src="/images/raleigh.jpg"></img>
 			</div>
 			
+			<% 
+			SortEvents sorter = new SortEvents();
+			ArrayList<String> imageUrls = new ArrayList<String>();
+			imageUrls = sorter.sortBySoonest();
+			for (int i = 0; i < imageUrls.size(); i++) {
+			%>	
 			<div class="item">
-				<img src="/images/concert.jpg"></img>
+				<img src="<%= imageUrls.get(i) %>"></img>
 			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
+			<%
+			}
+			%>
 			
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/concert.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/fountain.jpg"></img>
-			</div>
-			<div class="item">
-				<img src="/images/raleigh.jpg"></img>
-			</div>
+			
 		</div>
 	</div>
 	
