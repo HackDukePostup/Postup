@@ -63,6 +63,6 @@ public class Upload extends HttpServlet {
 			System.out.println("WE DID IT");
 		}
 		System.out.println("Time to redirect...");
-		res.sendRedirect("/index.jsp");
+		res.sendRedirect("/posters.jsp");
 	}
 }
