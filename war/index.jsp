@@ -2,9 +2,12 @@
 <html>
   <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 =======
+=======
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
     <title>
       POSTUP
     </title>
@@ -13,6 +16,7 @@
 >>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/main.css" rel="stylesheet">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <style>
       html, body, #map-canvas {
@@ -36,6 +40,12 @@
         outline: none;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       }
+=======
+    <!-- Jasny Bootstrap Extensions -->
+    <link href="extend/css/jasny-bootstrap.min.css" rel="stylesheet">
+    <!-- Datepicker Bootstrap Extension-->
+    <link href="datepicker/css/datepicker.css" rel="stylesheet">
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 =======
     <!-- Jasny Bootstrap Extensions -->
     <link href="extend/css/jasny-bootstrap.min.css" rel="stylesheet">
@@ -169,9 +179,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </style>
   </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <body style="background-image:url('/images/concert.jpg'); background-size:100%;">
   	<div class="row" style="margin-bottom:60px;">
 =======
+=======
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 
   <body>
   
@@ -188,10 +201,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div class="row">
 
     <!-- Site Title -->
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
+=======
 >>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 	  <div class="col-xs-12 col-sm-6 col-md-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  	<h1 style="margin-top:0px; color:#f2f2f2">POSTUP</h1>
+=======
+	  	<h1 style="margin-top:0px;">
+        POSTUP
+      </h1>
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 =======
 	  	<h1 style="margin-top:0px;">
         POSTUP
@@ -207,6 +229,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	  	</button>
 	  </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	</div>
   
   
@@ -217,6 +240,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
     	<div id="spacer" style="height:10px;width:100%;"></div>
     	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 20px);"></div>
 =======
+=======
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 
     <!-- MODAL: Upload Poster Form -->
 	  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
