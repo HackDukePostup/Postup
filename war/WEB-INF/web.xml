@@ -4,19 +4,21 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-
-    <welcome-file-list>
+	
+	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
-		
+	
 	<servlet>
 		<servlet-name>CodeReggie</servlet-name>
-		<servlet-class>com.hackduke.codereggie.CodeReggieServlet</servlet-class>
+		<servlet-class>com.hackduke.codereggie.servlets.CodeReggieServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>CodeReggie</servlet-name>
 		<url-pattern>/codereggie</url-pattern>
 	</servlet-mapping>
+
+	
 
 	<servlet>
 	  <servlet-name>Upload</servlet-name>
@@ -27,13 +29,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
       <url-pattern>/upload</url-pattern>
   	</servlet-mapping>
   
-	<servlet>
-	  <servlet-name>Serve</servlet-name>
-	  <servlet-class>com.hackduke.codereggie.Serve</servlet-class>
-	</servlet>
-	<servlet-mapping>
-	  <servlet-name>Serve</servlet-name>
-	  <url-pattern>/serve</url-pattern>
-	</servlet-mapping>
+
+  <servlet>
+    <servlet-name>Serve</servlet-name>
+    <servlet-class>com.hackduke.codereggie.serlets.Serve</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Serve</servlet-name>
+    <url-pattern>/serve</url-pattern>
+  </servlet-mapping>
   
 </web-app>

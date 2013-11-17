@@ -1,4 +1,4 @@
-package com.hackduke.codereggie;
+package com.hackduke.codereggie.servlets;
 
 //file Serve.java
 
