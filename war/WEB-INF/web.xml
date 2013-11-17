@@ -5,8 +5,9 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	
+	<!--
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	
 	<servlet>
@@ -17,12 +18,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>CodeReggie</servlet-name>
 		<url-pattern>/codereggie</url-pattern>
 	</servlet-mapping>
-
+	-->
 	
 
 	<servlet>
 	  <servlet-name>Upload</servlet-name>
-	  <servlet-class>com.hackduke.codereggie.Upload</servlet-class>
+	  <servlet-class>com.hackduke.codereggie.servlets.Upload</servlet-class>
 	</servlet>
 	<servlet-mapping>
       <servlet-name>Upload</servlet-name>
@@ -32,7 +33,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
   <servlet>
     <servlet-name>Serve</servlet-name>
-    <servlet-class>com.hackduke.codereggie.serlets.Serve</servlet-class>
+    <servlet-class>com.hackduke.codereggie.servlets.Serve</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Serve</servlet-name>

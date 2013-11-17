@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <html>
   <head>
     <title>Bootstrap 101 Template</title>
@@ -15,11 +19,14 @@
     <![endif]-->
   </head>
   <body>
+  
+  <% BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService(); %>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="dist/js/bootstrap.min.js"></script>
+    
     <div class="row">
 	  <div class="col-xs-12 col-sm-6 col-md-6">
 	  	<h1 style="margin-top:0px;">POSTUP</h1>
@@ -38,23 +45,23 @@
 		        <h4 class="modal-title" id="myModalLabel">Upload an Event Poster</h4>
 		      </div>
 		      <div class="modal-body">
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal" role="form" action="<%= blobstoreService.createUploadUrl("/upload") %>" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="upload" class="col-sm-3 control-label">Poster Upload</label>
             <div class="col-sm-9" style="margin-top:10px;">
-              <input type="file" id="uploadField">
+              <input type="file" id="uploadField" name="myFile">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEventTitle" class="col-sm-3 control-label">Event Title</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="inputEventtitle" placeholder="Event Title">
+              <input type="text" class="form-control" id="inputEventtitle" placeholder="Event Title" name="title">
             </div>
           </div>
           <div class="form-group">
             <label for="inputAddress" class="col-sm-3 control-label">Address</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+              <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="address">
             </div>
           </div>
           <div class="form-group">
@@ -119,33 +126,30 @@
           <div class="form-group">
             <label for="inputAdditionalInfo" class="col-sm-3 control-label">Additional Info</label>
             <div class="col-sm-9">
-              <textarea name="additionalInfo" cols="60" rows="5"></textarea>
+              <textarea name="additionalInfo" cols="60" rows="5" name="additionalInfo"></textarea>
             </div>
           </div>
           <div class="form-group">
             <label for="inputTags" class="col-sm-3 control-label">Tags(comma seperated)</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="inputTags" placeholder="Tags">
+              <input type="text" class="form-control" id="inputTags" placeholder="Tags" name="tags">
             </div>
           </div>
           <div class="form-group">
             <label for="inputVenues" class="col-sm-3 control-label">Venues(comma seperated)</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="inputVenues" placeholder="Venues">
+              <input type="text" class="form-control" id="inputVenues" placeholder="Venues" name="venues">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </div>
       </form>		        
 		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
+
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 	  </div><!-- /.modal -->

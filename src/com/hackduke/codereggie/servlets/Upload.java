@@ -35,21 +35,22 @@ public class Upload extends HttpServlet {
 
 		Map<String, BlobKey> blobs = blobstoreService.getUploadedBlobs(req);
 		BlobKey blobKey = blobs.get("myFile");
-
+		System.out.println("Got image blob");
 		Entity event = new Entity("Event");
 		event.setProperty("imageBlobKey", blobKey.getKeyString());
 		event.setProperty("title", req.getParameter("title"));
 		event.setProperty("address", req.getParameter("address"));
+		System.out.println("Got to address");
 		// where string is the date from the request object; change later
-		String string = "2011-03-22";
+		/*String string = "2011-03-22";
 		try {
 			Date date = new SimpleDateFormat("yyyy-MM-dd").parse(string);
 			event.setProperty("date", date.toString());
 		} catch (Exception e) {
-		}
+		}*/
 		event.setProperty("additionalInfo", req.getParameter("additionalInfo"));
 		event.setProperty("tags", req.getParameter("tags"));
-
+		System.out.println("Got to tags");
 		String venues = req.getParameter("venues");
 		StringTokenizer strtok = new StringTokenizer(venues, ",");
 		while (strtok.hasMoreTokens()) {
@@ -57,8 +58,11 @@ public class Upload extends HttpServlet {
 			Entity associatedEvent = new Entity("Event");
 			associatedEvent = event;
 			associatedEvent.setProperty("venue", venue);
+			System.out.println("We're gonna try adding the Entity to the datastore...");
 			datastore.put(associatedEvent);
+			System.out.println("WE DID IT");
 		}
-		res.sendRedirect("/");
+		System.out.println("Time to redirect...");
+		res.sendRedirect("/index.jsp");
 	}
 }
