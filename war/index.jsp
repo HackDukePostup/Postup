@@ -157,7 +157,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <body style="background-image:url('/images/austin.jpg'); background-position:fixed; background-size:100%;">
   	
   	
-  	<div class="row" style="margin-bottom:60px;">
+  	<div class="row" style="margin-bottom:40px;">
 	  <div class="col-xs-12 col-sm-6 col-md-6">
 	  	<img src="/images/logo_1.png" style="margin-left:20px" ></img>
 	  	<!-- <!-- <h1 style="margin-top:0px; color:#ffffff">POSTUP</h1> -->
@@ -169,7 +169,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   
   	<form action="/posters.jsp" method="get" enctype="multipart/form-data">
     <input id="pac-input" name="address" class="controls" type="text" placeholder="Show me events near..." style="color:black;margin-top:30px;margin-left:auto;margin-right:auto;width:70%;">	  
-      <div id="map_container" style="background-color:#242223; background-opacity:.5;height:450px; margin-left:auto; margin-right:auto; border-radius:10px">
+      <div id="map_container" style="background-color:#242223; background-opacity:.5; margin-left:auto; margin-right:auto; border-radius:10px">
 	    	<div id="spacer" style="height:10px;width:100%;"></div>
 	    <div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 70px);"></div>
 	    	<div class="form-group">

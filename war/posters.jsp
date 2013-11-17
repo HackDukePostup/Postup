@@ -118,12 +118,9 @@
               </div>
 
               <div class="form-group">
-                <label for="inputAdditionalInfo" class="col-sm-3 control-label">
-                  Additional Info
-                </label>
+                <label for="inputAdditionalInfo" class="col-sm-3 control-label">Additional Info</label>
                 <div class="col-sm-9">
-                  <textarea class="form-control" rows="5" name="additionalInfo">                 
-                  </textarea>
+                  <textarea class="form-control" rows="5" name="additionalInfo"></textarea>
                 </div>
               </div>
 

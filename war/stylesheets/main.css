@@ -11,7 +11,8 @@ h1 {
 }
 
 #map_container{
-		width:90%; 
+		width:90%;
+		height:300px; 
 }
 
 #upload_button {
@@ -50,6 +51,7 @@ h1 {
 @media (min-width: 992px) {
 	#map_container{
 		width:50%; 
+		height:450px;
 	}
 }
 
