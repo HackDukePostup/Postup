@@ -85,8 +85,8 @@ function initialize() {
   });
 
   var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(-33.8902, 151.1759),
-      new google.maps.LatLng(-33.8474, 151.2631));
+      new google.maps.LatLng(35.7120, -79.2690),
+      new google.maps.LatLng(36.1057, -78.4534));
   map.fitBounds(defaultBounds);
 
   // Create the search box and link it to the UI element.
@@ -153,33 +153,31 @@ google.maps.event.addDomListener(window, 'load', initialize);
       }
     </style>
   </head>
-  <body style="background-image:url('/images/concert.jpg'); background-size:100%;">
+  <body style="background-image:url('/images/austin.jpg'); background-size:100%;">
   	<div class="row" style="margin-bottom:60px;">
 	  <div class="col-xs-12 col-sm-6 col-md-6">
-	  	<h1 style="margin-top:0px; color:#f">POSTUP</h1>
-	  </div>
-	  <div class="col-xs-12 col-sm-6 col-md-6" style="margin-top:10px;">
-	  	<button id="upload_button" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:20px;padding-left:10px;padding-right:10px;">
-	  		<span class="glyphicon glyphicon-plus">
-	  		</span>
-	  	</button>
+	  	<img src="/images/logo1.png" style="margin-left:20px;" ></img>
+	  	<!-- <!-- <h1 style="margin-top:0px; color:#ffffff">POSTUP</h1> -->
 	  </div>
 	</div>
+	
+	
   
   
   	<form action="/posters.jsp" method="get" enctype="multipart/form-data">
     <input id="pac-input" name="address" class="controls" type="text" placeholder="Search Box">
     
-    <div id="map_container" style="background-color:#242223; width:60%; height:400px; margin-left:auto; margin-right:auto; border-radius:10px">
+    <div id="map_container" style="background-color:#242223; background-opacity:.5; width:57%; height:500px; margin-left:auto; margin-right:auto; border-radius:10px">
     	<div id="spacer" style="height:10px;width:100%;"></div>
-    	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 20px);"></div>
-    </div>
-
-    <div class="form-group">
-    	<div class="col-sm-offset-9 col-sm-9;" style="padding-top:5px">
-        	<button type="submit" class="btn btn-primary">Go</button>
+    	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 70px);"></div>
+    	<div class="form-group">
+    		<div class="col-sm-offset-9 col-sm-9;" style="padding-top:12px; padding-left:70px;">
+        		<button type="submit" class="btn btn-default">Go</button>
         </div>
     </div>
+    </div>
+
+    
     </form>
   </body>
 </html>

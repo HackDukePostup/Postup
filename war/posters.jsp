@@ -137,6 +137,7 @@
 								</div>
 							</div>
 
+<<<<<<< HEAD
 							<div class="form-group">
 								<label for="inputVenues" class="col-sm-3 control-label">
 									Places </label>
@@ -167,6 +168,32 @@
 		<script src="/masonry/js/masonry.pkgd.min.js"></script>
 		<div id="container" class="js-masonry"
 			data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true}'>
+=======
+              <div class="form-group">
+                <label for="inputVenues" class="col-sm-3 control-label">
+                  Places
+                </label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputVenues" placeholder="Where are you hanging this in real life?" name="venues">
+                </div>
+              </div>
+              
+              <div class="modal-footer">
+              		<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+		      		<button type="submit" class="btn btn-success">Submit</button>
+		      </div>
+            </form>		        
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+    </div>
+    
+    <div class="col-md-12">
+	    <!-- MASONRY START -->
+	    <script src="/masonry/js/masonry.pkgd.min.js"></script>
+		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 310, "itemSelector": ".item", "isfitwidth": true, "gutter": 10}' style="margin-right:auto;margin-left:auto;">
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
 
 			<div class="grid-sizer"></div>
@@ -175,6 +202,7 @@
 					src="/images/concert.jpg"></img></a>
 
 				<!-- Modal -->
+<<<<<<< HEAD
 				<div class="modal fade" id="photo1" tabindex="-1" role="dialog"
 					aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
@@ -204,6 +232,84 @@
 				<!-- /.modal -->
 
 				<% 
+=======
+<div class="modal fade" id="photo1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">GET EVENT TITLE (title)</h4>
+      </div>
+      <div class="modal-body">
+        <img src="/images/concert.jpg" style="100%;"></img>
+        <br />
+        <h4><!-- DESCRIPTION OF EVENT (additionalInfo)--></h4>
+        <br />
+        <h4><!-- ADDRESS (address)--></h4>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<% 
+>>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 			SortEvents sorter = new SortEvents();
 			ArrayList<String> imageUrls = new ArrayList<String>();
 			imageUrls = sorter.sortBySoonest();
