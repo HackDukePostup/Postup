@@ -30,7 +30,7 @@ h1 {
 		width: 100%;
 	}
 	.item {
-		width:100%;
+		width:25%;
 	}
 
 
@@ -49,10 +49,10 @@ h1 {
 	}
 	
 	.grid-sizer{
-		width: 33%;
+		width: 50%;
 	}
 	.item {
-		width:33%;
+		width:50%;
 	}
 }
 
