@@ -1,6 +1,10 @@
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
+.datepicker {
+	z-index: 1151 !important;
+}
+
 h1 {
 	font-size:70px;
 	text-align:center;
