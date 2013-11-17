@@ -175,19 +175,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
     	<div id="map-canvas" style="width:calc(100% - 20px);height:calc(100% - 20px);"></div>
     </div>
 
-    <script src="masonry/js/masonry.pkgd.min.js"></script>
     <div class="form-group">
     	<div class="col-sm-offset-9 col-sm-9;" style="padding-top:5px">
         	<button type="submit" class="btn btn-primary">Go</button>
         </div>
     </div>
     </form>
-    
-    <div class="col-md-1">.col-md-1</div>
-	    <!-- MASONRY START -->
-		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item", "gutter": 10, }'>
-			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
-			<!-- <div class"item"></div> -->
-		</div>
   </body>
 </html>
