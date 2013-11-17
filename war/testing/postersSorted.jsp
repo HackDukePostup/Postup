@@ -2,8 +2,8 @@
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
 <%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ page import="java.util.LinkedList" %>
-<%@ page import="com.hackduke.codereggie.actions" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.hackduke.codereggie.actions.SortEvents" %>
 
 
 <html>
