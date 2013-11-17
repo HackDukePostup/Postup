@@ -159,7 +159,6 @@
 	    <script src="/masonry/js/masonry.pkgd.min.js"></script>
 		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true}'>
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
-<<<<<<< HEAD
 			
 			<div class="grid-sizer"></div>
 			<div class="item">
@@ -236,9 +235,6 @@
 			<div class="item">
 				<img src="/images/raleigh.jpg"></img>
 			</div>
-=======
-			<!-- <div class="item"></div> -->
->>>>>>> branch 'master' of https://github.com/codereggie/childofreggie.git
 		</div>
 	</div>
 	
