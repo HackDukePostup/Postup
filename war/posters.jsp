@@ -159,7 +159,7 @@
     <div class="col-md-12">
 	    <!-- MASONRY START -->
 	    <script src="/masonry/js/masonry.pkgd.min.js"></script>
-		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "isFitWidth": true}'>
+		<div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 310, "itemSelector": ".item", "isfitwidth": true, "gutter": 10}' style="margin-right:auto;margin-left:auto;">
 			<!-- THIS IS WHERE YOU GON GET THE POSTER IMAGES AND PUT ME IN THIS ITEM DIV AND SHIT -->
 			
 			<div class="grid-sizer"></div>
@@ -186,6 +186,55 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 			</div>
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
+			<div class="item">
+				<img src="/images/fountain.jpg"></img>
+			</div>
+			<div class="item">
+				<img src="/images/raleigh.jpg"></img>
+			</div>
+			
 			<div class="item">
 				<img src="/images/fountain.jpg"></img>
 			</div>

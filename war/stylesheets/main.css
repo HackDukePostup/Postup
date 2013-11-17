@@ -17,21 +17,15 @@ h1 {
 }
 
 .item {
-  width:100%;
-  margin-bottom: 20px;
+  width:310px;
+  max-width:100%;
+  margin-bottom: 10px;
 }
 
 .item img {  
   max-width:100%;
   overflow:hidden;
 }
-
-.grid-sizer {
-		width: 100%;
-	}
-	.item {
-		width:25%;
-	}
 
 
 /* Small devices (tablets, 768px and up) */
@@ -47,23 +41,12 @@ h1 {
 		float:right;
 		margin-right:20px;
 	}
-	
-	.grid-sizer{
-		width: 50%;
-	}
-	.item {
-		width:50%;
-	}
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	.grid-sizer{
-		width: 25%;
-	}
-	.item {
-		width:25%;
-	}
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
