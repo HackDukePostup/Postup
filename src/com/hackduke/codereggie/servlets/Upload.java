@@ -29,9 +29,8 @@ public class Upload extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-
-		DatastoreService datastore = DatastoreServiceFactory
-				.getDatastoreService();
+		System.out.println("You at least hit the method");
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
 		Map<String, BlobKey> blobs = blobstoreService.getUploadedBlobs(req);
 		BlobKey blobKey = blobs.get("myFile");
@@ -41,19 +40,18 @@ public class Upload extends HttpServlet {
 		event.setProperty("title", req.getParameter("title"));
 		event.setProperty("address", req.getParameter("address"));
 		System.out.println("Got to address");
-		// where string is the date from the request object; change later
-		/*String string = "2011-03-22";
+		String date = req.getParameter("date");
 		try {
-			Date date = new SimpleDateFormat("yyyy-MM-dd").parse(string);
-			event.setProperty("date", date.toString());
+			Date dateParsed = new SimpleDateFormat("MM/dd/yyyy").parse(date);
+			event.setProperty("date", dateParsed.toString());
 		} catch (Exception e) {
-		}*/
+		}
 		event.setProperty("additionalInfo", req.getParameter("additionalInfo"));
 		event.setProperty("tags", req.getParameter("tags"));
 		System.out.println("Got to tags");
 		String venues = req.getParameter("venues");
 		StringTokenizer strtok = new StringTokenizer(venues, ",");
-		while (strtok.hasMoreTokens()) {
+		while (strtok.hasMoreTokens()) {	
 			String venue = strtok.nextToken();
 			Entity associatedEvent = new Entity("Event");
 			associatedEvent = event;
