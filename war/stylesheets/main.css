@@ -16,6 +16,10 @@ h1 {
 	margin-bottom;
 }
 
+.item {
+  margin-bottom: 10px;
+}
+
 
 
 /* Small devices (tablets, 768px and up) */
@@ -33,12 +37,26 @@ h1 {
 	}
 }
 
+.photo_on_board {
+	width:calc(100% - 20px);
+	padding-left:10px;
+	padding-right:10px;
+}
+
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	
+	.photo_on_board {
+		width:calc(25% - 20px);
+		padding-left:10px;
+		padding-right:10px;
+	}	
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+	.photo_on_board {
+		width:calc(20% - 20px);
+		padding-left:10px;
+		padding-right:10px;
+	}
 }
