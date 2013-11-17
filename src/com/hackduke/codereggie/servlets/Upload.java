@@ -43,7 +43,7 @@ public class Upload extends HttpServlet {
 		String date = req.getParameter("date");
 		try {
 			Date dateParsed = new SimpleDateFormat("MM/dd/yyyy").parse(date);
-			event.setProperty("date", dateParsed.toString());
+			event.setProperty("date", dateParsed);
 		} catch (Exception e) {
 		}
 		event.setProperty("additionalInfo", req.getParameter("additionalInfo"));
